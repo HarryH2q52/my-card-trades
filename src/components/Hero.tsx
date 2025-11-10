@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-cards.jpg";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -35,10 +36,12 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button size="lg" className="bg-gradient-primary text-lg px-8 group shadow-premium hover:shadow-xl transition-all">
-              Start Trading
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link to="/auth">
+              <Button size="lg" className="bg-gradient-primary text-lg px-8 group shadow-premium hover:shadow-xl transition-all">
+                Start Trading
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
             <Button size="lg" variant="outline" className="text-lg px-8 backdrop-blur-sm">
               Browse Collections
             </Button>
